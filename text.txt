@@ -1,0 +1,36 @@
+1. models
+- users
+- connectors
+- emails
+- user_connectors
+
+2. relation
+users has_many user_connectors
+user has_many connectors thourgh user
+has many_emails
+
+3. api
+
+/POST users
+ - email
+ - password
+
+/GET users/:id
+
+/GET users/:id/connectors
+
+POST users/:id/mails
+POST /users/:id/webhook
+GET users/:id/connectors
+POST users/:id/connectors
+PUT users/:id/connectors
+DESTROY users/:id/connectors
+
+4. supported connectors
+ - mailgun
+ - sendgrid
+ - mailchimp
+ - mailjet
+ - sendinblue
+ - mailersend
+ - sendpulse
